@@ -89,7 +89,7 @@ android {
         // You must set these fields to match or be compatible with the corresponding data
         // of the source app. (Data is displayed when the source apk library is built.)
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 22
         versionCode 150
         versionName "1.50"
 
