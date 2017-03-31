@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/modules/DangBeiAd/DangBeiAd.iml" filepath="$PROJECT_DIR$/modules/DangBeiAd/DangBeiAd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/DangBeiUpdate/DangBeiUpdate.iml" filepath="$PROJECT_DIR$/modules/DangBeiUpdate/DangBeiUpdate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/YouMiAd/YouMiAd.iml" filepath="$PROJECT_DIR$/modules/YouMiAd/YouMiAd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/framework/framework.iml" filepath="$PROJECT_DIR$/modules/framework/framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/modules.iml" filepath="$PROJECT_DIR$/modules/modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patched/patched.iml" filepath="$PROJECT_DIR$/patched/patched.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patched/patched.iml" filepath="$PROJECT_DIR$/patched/patched.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patched-app.iml" filepath="$PROJECT_DIR$/patched-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patched-com.nes.emulator.plus.iml" filepath="$PROJECT_DIR$/patched-com.nes.emulator.plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patched-com.seleuco.mame4all.iml" filepath="$PROJECT_DIR$/patched-com.seleuco.mame4all.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/source.iml" filepath="$PROJECT_DIR$/source/source.iml" />
+      <module fileurl="file://$PROJECT_DIR$/source/source.iml" filepath="$PROJECT_DIR$/source/source.iml" />
+    </modules>
+  </component>
+</project>

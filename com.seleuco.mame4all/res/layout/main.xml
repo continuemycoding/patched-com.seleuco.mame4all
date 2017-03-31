@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/LinearLayout01" android:background="@color/emu_back_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/EmulatorFrame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.seleuco.mame4all.views.InputView android:id="@id/InputView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_portrait" android:scaleType="fitXY" android:adjustViewBounds="true" />
+</LinearLayout>

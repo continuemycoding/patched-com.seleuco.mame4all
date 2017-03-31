@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" package="com.qiang.mame4all">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--有米广告-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+    <application android:allowClearUserData="true" android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.seleuco.mame4all.MAME4all" android:theme="@style/Theme.MAME4ALL" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="MAME4droid Preferences" android:name="com.seleuco.mame4all.prefs.UserPreferences" android:theme="@style/Theme.MAME4ALL.TitleBar"/>
+        <activity android:label="MAME4droid Help" android:launchMode="singleTop" android:name="com.seleuco.mame4all.HelpActivity" android:theme="@style/Theme.MAME4ALL.TitleBar"/>
+        <activity android:label="MAME4droid Define Keys" android:name="com.seleuco.mame4all.prefs.DefineKeys" android:theme="@style/Theme.MAME4ALL.TitleBar"/>
+        <activity android:label="MAME4droid Player Keys" android:name="com.seleuco.mame4all.prefs.ListKeys" android:theme="@style/Theme.MAME4ALL.TitleBar"/>
+        <activity android:label="Select Key" android:name=".prefs.KeySelect" android:theme="@android:style/Theme.Dialog"/>
+        <meta-data android:name="xperiaplayoptimized_content" android:resource="@drawable/icon"/>
+
+        <receiver android:name="com.qiang.framework.receiver.AppInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data android:name="multiplayer" android:value="@bool/multiplayer" />
+
+        <meta-data android:name="UMENG_APPKEY" android:value="${UMENG_APPKEY}" />
+        <meta-data android:name="UMENG_CHANNEL" android:value="${UMENG_CHANNEL}"/>
+
+        <meta-data android:name="DANGBEIAD_APPID" android:value="@string/DANGBEIAD_APPID"/>
+        <meta-data android:name="DANGBEIAD_APPKEY" android:value="@string/DANGBEIAD_APPKEY"/>
+    </application>
+</manifest>

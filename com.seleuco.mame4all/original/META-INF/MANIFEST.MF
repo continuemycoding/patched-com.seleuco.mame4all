@@ -1,0 +1,297 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android)
+
+Name: res/xml/userpreferences.xml
+SHA1-Digest: vJ5pRCWwZmFJ3yybOEC8iwvK5ns=
+
+Name: res/drawable/stick_right.png
+SHA1-Digest: ij8tw3jnK6cKiNcx/zkD2pTve9k=
+
+Name: res/drawable-large/dpad_down.png
+SHA1-Digest: I3obLi0eXnjoFKxWqUU3pe8jYg4=
+
+Name: lib/armeabi/libmame4all-jni.so
+SHA1-Digest: hkWj2hx9OAx/hzlgR4WFo82E8O8=
+
+Name: res/drawable/border.png
+SHA1-Digest: UuNXwltpuSDZlvNUi7mLnuUSrGM=
+
+Name: res/layout/bar.xml
+SHA1-Digest: f/mNmxL8EsqOiz1GziB4tT5vOqs=
+
+Name: lib/armeabi/libMAME4all.so
+SHA1-Digest: KUfYxeTL+twQo3qSKtxt5mRa98c=
+
+Name: res/drawable/button_r1.png
+SHA1-Digest: Q5VbI+B7kqnJ66FWsLjBHuQDmj8=
+
+Name: res/drawable/crt_2.png
+SHA1-Digest: FN9jeridTWgxtaRaJDwGDOFnQc0=
+
+Name: res/drawable/button_b_press.png
+SHA1-Digest: IpbeBe51rmO0svZnxbE/pke3P5Q=
+
+Name: res/layout-land/emuview_hw.xml
+SHA1-Digest: VtaC4Gqv2IhKdyiVEKGUxWxGu6o=
+
+Name: res/drawable/button_start_press.png
+SHA1-Digest: enxP80K7rZE9imzy4jV8e+bUBPA=
+
+Name: res/drawable/button_y.png
+SHA1-Digest: RuTKEKPpqFG3DWrzkunMMyqdP8k=
+
+Name: res/drawable/crt_1.png
+SHA1-Digest: dYpywaCUOQV597I8dDgnsW7nJwk=
+
+Name: res/raw/controller_portrait.txt
+SHA1-Digest: d2U1fKtu/DVB5FGFEN/EZvAMhRk=
+
+Name: res/raw-large/controller_landscape.txt
+SHA1-Digest: ami6sGLsQ0mxAfHuQVPt1OeK4tE=
+
+Name: res/drawable/button_x.png
+SHA1-Digest: EnCdN033kAOpcfzsYHH837IL3Ac=
+
+Name: res/drawable-large/stick_down_left.png
+SHA1-Digest: 9pxaNC7SaI3SRZ8iqCMdqDxZQJc=
+
+Name: res/drawable-large/dpad_down_right.png
+SHA1-Digest: vTzIONI0VzG0H0i9jsLlbHdSDxo=
+
+Name: res/drawable/button_x_press.png
+SHA1-Digest: +2zveRqswxHGU4TBLwkPBWOOJ3M=
+
+Name: lib/mips/libmame4all-jni.so
+SHA1-Digest: vw78kxH9TYcWDpq2qOxHuIzP5ig=
+
+Name: res/drawable/dpad_none.png
+SHA1-Digest: DEHV8FleNl5gnIw8IEeapd4AKG8=
+
+Name: res/drawable/button_l1.png
+SHA1-Digest: Yj8ZfPWhvnv9L1DGnfKy8XB7fJo=
+
+Name: res/drawable/button_r2.png
+SHA1-Digest: 7znF76mnyU9mnv/zE0eDwcBixNc=
+
+Name: res/layout-land/emuview_sw.xml
+SHA1-Digest: /Yx/MWPn25ycJAMt4oRGWLLNpgw=
+
+Name: res/drawable/button_l2.png
+SHA1-Digest: UlF4z6F1AU05HroDLbx7jGah9HY=
+
+Name: res/drawable/button_start.png
+SHA1-Digest: wCSWYg6YZn0jwfs6skxuLiMEFW0=
+
+Name: res/drawable-large/back_portrait.png
+SHA1-Digest: 8wUDCyYio53VUvPhLVxaleoDWMc=
+
+Name: res/drawable-large/dpad_up.png
+SHA1-Digest: OYzhpP9jx4NDlQp2in//c3W1VK8=
+
+Name: res/drawable/directory_icon.png
+SHA1-Digest: Q5XNg21BEmTtLC/jceFdic20yZY=
+
+Name: res/drawable/stick_down.png
+SHA1-Digest: P5fHZHZ3vUyTTU4kzEfnA5WAkFA=
+
+Name: res/drawable/stick_inner.png
+SHA1-Digest: zP6//PCWkvDVJUbf1ccp663PIE8=
+
+Name: resources.arsc
+SHA1-Digest: RZZgp+R5qRpX9Tr6FqrQcjQ34JI=
+
+Name: res/drawable-large/dpad_left.png
+SHA1-Digest: rmIgYoZnS4O1JhW+1kCFzUYIZs4=
+
+Name: res/drawable-large/stick_down_right.png
+SHA1-Digest: O5Kcar49GtfoRDZUWQsTycp0StM=
+
+Name: res/drawable/stick_none.png
+SHA1-Digest: Amz8fRyIJNtZPNWkLDWgPRj6aLc=
+
+Name: AndroidManifest.xml
+SHA1-Digest: fKLfjrbSIkaFTSWjxeED3dLUeqU=
+
+Name: res/drawable-large/dpad_down_left.png
+SHA1-Digest: jDaRg5GN3kJhodbehqYamdyaY6E=
+
+Name: lib/armeabi-v7a/libMAME4all.so
+SHA1-Digest: V7Ap0Ii8XzmxgpbbGWUNjHJFZlw=
+
+Name: res/raw/readme.txt
+SHA1-Digest: RUx2n/dmkCidXFe8CU1jlbmy+Es=
+
+Name: res/drawable-large/dpad_right.png
+SHA1-Digest: OswHP3Gx87hxUuFPLAaDVOcmpzY=
+
+Name: res/drawable/stick_down_left.png
+SHA1-Digest: T4C+/UlQ4Pgsa7d2DsmWLG8Ifbc=
+
+Name: res/drawable/directory_up.png
+SHA1-Digest: wghnaP74ltxrbOEWo59M8FOlwMw=
+
+Name: res/drawable/stick_up_left.png
+SHA1-Digest: cTwf6LtiB3tXkO8CWpsMSr8SaRY=
+
+Name: res/drawable-large/stick_up.png
+SHA1-Digest: GqnJbz5rBLgTfQJQWlxwtzOkMoI=
+
+Name: classes.dex
+SHA1-Digest: oWWSlpIGIne8W5phu8q94h1snVI=
+
+Name: res/layout-land/emuview_gl.xml
+SHA1-Digest: 0nfx3B9Kw5BmG4Bo/8Rtelqg0yg=
+
+Name: res/drawable/dpad_up_left.png
+SHA1-Digest: ZOAU7YHV0GottnGN7WTQ3tY1W5U=
+
+Name: res/drawable/back_portrait.png
+SHA1-Digest: rcZECG5fl9TWyLxDMm65WByrSzw=
+
+Name: res/drawable/icon.png
+SHA1-Digest: oGbANCjlOcHW13qFA9A8ZJQsBvs=
+
+Name: res/drawable/dpad_left.png
+SHA1-Digest: uf3yXMr2fq4KO+ETuxfTh80rWwg=
+
+Name: res/drawable/stick_up.png
+SHA1-Digest: p3s6BnOx61+2+QfLpEVcGkBZiYY=
+
+Name: res/drawable-large/dpad_up_left.png
+SHA1-Digest: N3dabrZhXo+eoSJyLq2JMy6PTjw=
+
+Name: lib/mips/libMAME4all.so
+SHA1-Digest: 2RzsIIiaXaiHv1RcMVaiQy+3PHo=
+
+Name: res/drawable/dpad_down_left.png
+SHA1-Digest: eqyuY2yMgJYQvaYvf/n87lY2MPA=
+
+Name: res/drawable/stick_up_right.png
+SHA1-Digest: cHnRjDv2ejcH804W4J+Cc5ZLmHs=
+
+Name: res/drawable-large/stick_left.png
+SHA1-Digest: P8gOgKLqomBKdnxvjSAJJ7CO/rU=
+
+Name: res/drawable/stick_down_right.png
+SHA1-Digest: DIsG3nSGJEC5tqf7b9QC4YHvuuI=
+
+Name: res/drawable-large/stick_none.png
+SHA1-Digest: acxlhrT86LvvzN1vr1H9ykzbU58=
+
+Name: res/drawable/dpad_down.png
+SHA1-Digest: UJMdbvueyiWoyPWbDpAWho+NGaE=
+
+Name: res/drawable/button_select_press.png
+SHA1-Digest: 7/CGwfIlnCX6zAgQfgBu7ggaqu4=
+
+Name: res/layout/emuview_hw.xml
+SHA1-Digest: BUB2tBkDDHBsh2wC7fYPQCaabkw=
+
+Name: res/drawable/scanline_1.png
+SHA1-Digest: gsDClAL5ILQu2/atN6OxBC+MWtw=
+
+Name: res/drawable-large/stick_right.png
+SHA1-Digest: VzUeYEJEmdWWct4LTOtjOwx6C6E=
+
+Name: res/drawable/scanline_2.png
+SHA1-Digest: LIa7Ui41uafwc8MTuSEL8VbA35E=
+
+Name: res/drawable/button_l2_press.png
+SHA1-Digest: xtq/Erk2lYEx/DtwTA625RjJJDA=
+
+Name: res/drawable/button_r2_press.png
+SHA1-Digest: +51JLfAXeoX6W1B3lPoO2hFlcp8=
+
+Name: res/layout/emuview_gl.xml
+SHA1-Digest: 2Oq5vRy54hA5FR81PghoeIGH4Yw=
+
+Name: res/drawable/button_select.png
+SHA1-Digest: EflMucLR+7lJQHujwngX2LwvJcg=
+
+Name: res/drawable-large/dpad_none.png
+SHA1-Digest: g8LPFUFTaJ9Th8p4CH11wMD77hA=
+
+Name: res/drawable/button_a.png
+SHA1-Digest: 9yLcI/0aHlNtOtARwPqZ8/IG1PY=
+
+Name: res/drawable/button_a_press.png
+SHA1-Digest: RYVyv+IMFPUM1nMFl86iw8chsgQ=
+
+Name: res/layout-land/main.xml
+SHA1-Digest: iYhtMkxrtjJcojEryPYwseRfcHo=
+
+Name: res/drawable/dpad_up_right.png
+SHA1-Digest: 5sJmUDK6JqebqFBNQ2T5xdBUWn8=
+
+Name: res/layout/main.xml
+SHA1-Digest: UncBceku1mVz4XSOrdfRXhH35b8=
+
+Name: res/drawable/stick_outer.png
+SHA1-Digest: h/NLPLG4MJSx3OuK6mwLfn50BD8=
+
+Name: res/layout/emuview_sw.xml
+SHA1-Digest: yNhLk/AQbhyTqkzHuBy0M5Vx+Ys=
+
+Name: res/drawable/dpad_up.png
+SHA1-Digest: 9M8Sya907Kj9eZ59V2H9j44s8E4=
+
+Name: res/drawable/button_b.png
+SHA1-Digest: 3ViIKvUu5ir6N6IaDQnELSHRwFw=
+
+Name: res/drawable/file_icon.png
+SHA1-Digest: QX9Vp7vAdzWk4SwCT71Fv8FxAJ8=
+
+Name: res/drawable-large/stick_up_right.png
+SHA1-Digest: MSfz60svKh7NM5poU3yk/1ueZIU=
+
+Name: res/drawable-large/stick_down.png
+SHA1-Digest: jB96biTnXA3sTx6IeNJEXZZoOvk=
+
+Name: res/raw-large/controller_portrait.txt
+SHA1-Digest: +U5OXHTd+S/3Pro9cVjHsLvfGVA=
+
+Name: res/raw/controller_landscape.txt
+SHA1-Digest: oOCUw5PszTfS+Y/9TuYeeRBE6ZQ=
+
+Name: res/layout-land/filterview.xml
+SHA1-Digest: LuII8VTnBtCAn18sz02LzOYUGhc=
+
+Name: res/menu/menu.xml
+SHA1-Digest: +JsEk8vo+Y2zdcQzhqRMQ8v2tWs=
+
+Name: res/drawable/button_r1_press.png
+SHA1-Digest: pFyqGIYkfLbHbJSY2v22A9eL1VQ=
+
+Name: res/layout/help.xml
+SHA1-Digest: 0XTV+3UHX2AYI3rTeEN7riY67mU=
+
+Name: res/layout/filterview.xml
+SHA1-Digest: 16J7PJ8M8gBJqKRa+YzsRT5svpo=
+
+Name: res/drawable/button_l1_press.png
+SHA1-Digest: GMTCK8l6Pn6400byFO8kH9Q9MzA=
+
+Name: res/raw/roms.zip
+SHA1-Digest: x3x9rXGjgfj6L+rC9aJhxqU1v08=
+
+Name: res/drawable-large/dpad_up_right.png
+SHA1-Digest: +1tfpSSv6nT+I1rWBHvxJvqHByM=
+
+Name: res/drawable/dpad_down_right.png
+SHA1-Digest: QSloOodNK6aXeeufH+vuWrrUxts=
+
+Name: res/drawable/stick_left.png
+SHA1-Digest: NuvLJ5hs08FglC4GNM1XdWP/tZ4=
+
+Name: res/drawable-large/stick_up_left.png
+SHA1-Digest: gWKgd5PIOrclpaOr5ncFyaqtI04=
+
+Name: res/drawable/button_y_press.png
+SHA1-Digest: bx5xZVEHcq30KXfL7YlVKlA03iE=
+
+Name: res/drawable/dpad_right.png
+SHA1-Digest: wwQfJr7vO3SK2GUTRq89Wk7kfpM=
+
+Name: lib/armeabi-v7a/libmame4all-jni.so
+SHA1-Digest: hkWj2hx9OAx/hzlgR4WFo82E8O8=
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="value">false</item>
+    <item type="id" name="seekbar">false</item>
+    <item type="id" name="EmulatorViewGL">false</item>
+    <item type="id" name="EmulatorViewHW">false</item>
+    <item type="id" name="EmulatorViewSW">false</item>
+    <item type="id" name="FilterView">false</item>
+    <item type="id" name="LinearLayout01">false</item>
+    <item type="id" name="ScrollView01">false</item>
+    <item type="id" name="TextView01">false</item>
+    <item type="id" name="ButtonContinue">false</item>
+    <item type="id" name="EmulatorFrame">false</item>
+    <item type="id" name="InputView">false</item>
+    <item type="id" name="vkeys">false</item>
+    <item type="id" name="vkey_X">false</item>
+    <item type="id" name="vkey_Y">false</item>
+    <item type="id" name="vkey_A">false</item>
+    <item type="id" name="vkey_B">false</item>
+    <item type="id" name="vkey_MENU">false</item>
+    <item type="id" name="vkey_SELECT">false</item>
+    <item type="id" name="menu_options_option">false</item>
+    <item type="id" name="menu_quit_game_option">false</item>
+    <item type="id" name="menu_quit_option">false</item>
+</resources>
