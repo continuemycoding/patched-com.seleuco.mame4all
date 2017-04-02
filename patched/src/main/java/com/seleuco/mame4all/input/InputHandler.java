@@ -1,5 +1,7 @@
 package com.seleuco.mame4all.input;
 
+import android.view.InputDevice;
+import android.view.InputEvent;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,6 +22,32 @@ import lanchon.dexpatcher.annotation.DexReplace;
 public class InputHandler implements View.OnTouchListener, View.OnKeyListener, IController {
 
     protected MAME4all mm;
+
+    protected static final int[] emulatorInputValues = null;
+
+    @DexAdd
+    private int[] players;
+
+    @DexAdd
+    private int getPlayerIndex(InputEvent event)
+    {
+        if ((event.getDevice().getSources() & InputDevice.SOURCE_JOYSTICK) == 0 || (event.getDevice().getSources() & (InputDevice.SOURCE_GAMEPAD)) == 0)
+            return 0;
+
+        if(players == null)
+            players = new int[4];
+
+        for(int i=0;i<players.length;i++)
+        {
+            if(players[i] == 0)
+                players[i] = event.getDeviceId();
+
+            if(players[i] == event.getDeviceId())
+                return i;
+        }
+
+        return -1;
+    }
 
     @DexAdd
     public int mapKey(int keyCode)
@@ -72,7 +100,7 @@ public class InputHandler implements View.OnTouchListener, View.OnKeyListener, I
         if(gameKey == -1)
             return false;
 
-        return handlePADKey(gameKey, event);
+        return handlePADKey(getPlayerIndex(event) * emulatorInputValues.length + gameKey, event);
     }
 
     @Override
