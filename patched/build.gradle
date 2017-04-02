@@ -215,64 +215,40 @@ android {
 
     productFlavors {
 
-        emulator {
-            resValue "string", "app_name", "NES 模拟器"
-            resValue "string", "app_type", ""
+        dino {
+            resValue "string", "app_name", "恐龙快打"
 
-            resValue "bool", "multiplayer", "true"
-
-            addManifestPlaceholders([UMENG_APPKEY: "58aa733d1c5dd059600003ef"])
+            addManifestPlaceholders([UMENG_APPKEY: "58d424e545297d4a0a0013e7"])
         }
 
-        xiaoaojianghu {
-            //versionCode 130
-            //versionName "1.30"
+        captcomm{
+            resValue "string", "app_name", "名将"
 
-            resValue "string", "app_name", "笑傲江湖"
-            resValue "string", "app_type", "角色扮演"
-
-            addManifestPlaceholders([UMENG_APPKEY: "58aa733d1c5dd059600003ef"])
+            addManifestPlaceholders([UMENG_APPKEY: "58d424f9a40fa3618a0006c6"])
         }
 
-        tubage {
-            //versionCode 130
-            //versionName "1.30"
+        knights{
+            resValue "string", "app_name", "圆桌骑士"
 
-            resValue "string", "app_name", "兔八哥"
-            resValue "string", "app_type", "动作冒险"
-
-            resValue "string", "DANGBEIAD_APPID", "62GWBRa6ujySw4MWTYrTKEsJ4uMESVpsD69RTvgmbkH6c2aZ"
-            resValue "string", "DANGBEIAD_APPKEY", "00C0F89C0A092DDB"
-
-            addManifestPlaceholders([UMENG_APPKEY: "58aadfeee88bad048f000860"])
+            addManifestPlaceholders([UMENG_APPKEY: "58d425294544cb138b001c6d"])
         }
 
-        zhadanren {
-            //versionCode 130
-            //versionName "1.30"
+        punisher{
+            resValue "string", "app_name", "惩罚者"
 
-            resValue "string", "app_name", "炸弹人"
-            resValue "string", "app_type", "战略策略"
-
-            resValue "string", "button_a", "炸弹"
-            resValue "string", "button_x", "引爆"
-
-            resValue "string", "button_a_visible", "true"
-            resValue "string", "button_x_visible", "true"
-
-            resValue "string", "DANGBEIAD_APPID", "pu48YmQAfE9JXxRpG6mFWekY2NTDnEmEQfJdsZcmzr4ENEYf"
-            resValue "string", "DANGBEIAD_APPKEY", "F9F5D01E118B768C"
-
-            addManifestPlaceholders([UMENG_APPKEY: "58ac6c327f2c741b19001b37"])
+            addManifestPlaceholders([UMENG_APPKEY: "58d425294544cb138b001c6d"])
         }
 
-        dangbeiaddemo {
-            applicationId "com"
+        orlegend{
+            resValue "string", "app_name", "西游释厄传"
 
-            resValue "string", "app_name", "当贝广告"
-            resValue "string", "app_type", ""
+            addManifestPlaceholders([UMENG_APPKEY: "58d42515677baa3b35001ce9"])
+        }
 
-            addManifestPlaceholders([UMENG_APPKEY: ""])
+        kod{
+            resValue "string", "app_name", "三国志"
+
+            addManifestPlaceholders([UMENG_APPKEY: "58d425294544cb138b001c6d"])
         }
     }
 
@@ -280,9 +256,9 @@ android {
         productFlavor.applicationIdSuffix "." + name
     }
 
-//    sourceSets.all { sourceSet ->
-//        sourceSet.res.srcDirs = ['src/main/res', 'src/main/games/' + name]
-//    }
+    sourceSets.all { sourceSet ->
+        sourceSet.res.srcDirs = ['src/main/res', 'src/main/games/' + name]
+    }
 }
 
 //tasks.withType(com.android.build.gradle.tasks.Lint) {
