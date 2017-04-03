@@ -6,6 +6,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.seleuco.mame4all.Emulator;
 import com.seleuco.mame4all.MAME4all;
 import com.seleuco.mame4all.helpers.DialogHelper;
 
@@ -19,7 +20,7 @@ import lanchon.dexpatcher.annotation.DexReplace;
  */
 
 @DexEdit(defaultAction = DexAction.IGNORE)
-public class InputHandler implements View.OnTouchListener, View.OnKeyListener, IController {
+public class InputHandler implements View.OnGenericMotionListener, View.OnTouchListener, View.OnKeyListener, IController {
 
     protected MAME4all mm;
 
@@ -27,6 +28,8 @@ public class InputHandler implements View.OnTouchListener, View.OnKeyListener, I
 
     @DexAdd
     private int[] players;
+
+    protected int [] pad_data;
 
     @DexAdd
     private int getPlayerIndex(InputEvent event)
@@ -46,7 +49,7 @@ public class InputHandler implements View.OnTouchListener, View.OnKeyListener, I
                 return i;
         }
 
-        return -1;
+        return 0;
     }
 
     @DexAdd
@@ -57,22 +60,82 @@ public class InputHandler implements View.OnTouchListener, View.OnKeyListener, I
 
         int[] keys = new int[128];
 
-        keys[KeyEvent.KEYCODE_DPAD_UP] = 0;
-        keys[KeyEvent.KEYCODE_DPAD_DOWN] = 1;
-        keys[KeyEvent.KEYCODE_DPAD_LEFT] = 2;
-        keys[KeyEvent.KEYCODE_DPAD_RIGHT] = 3;
-        keys[KeyEvent.KEYCODE_BUTTON_A] = 4;
-        keys[KeyEvent.KEYCODE_BUTTON_B] = 5;
-        keys[KeyEvent.KEYCODE_BUTTON_X] = 4;
-        keys[KeyEvent.KEYCODE_BUTTON_Y] = 5;
-        keys[KeyEvent.KEYCODE_BUTTON_SELECT] = 53;
-        keys[KeyEvent.KEYCODE_BUTTON_START] = 52;
-        keys[KeyEvent.KEYCODE_BUTTON_L1] = -1;
-        keys[KeyEvent.KEYCODE_BUTTON_R1] = -1;
-        keys[KeyEvent.KEYCODE_BUTTON_L2] = -1;
-        keys[KeyEvent.KEYCODE_BUTTON_R2] = -1;
+        keys[KeyEvent.KEYCODE_DPAD_UP] = UP_VALUE;
+        keys[KeyEvent.KEYCODE_DPAD_DOWN] = DOWN_VALUE;
+        keys[KeyEvent.KEYCODE_DPAD_LEFT] = LEFT_VALUE;
+        keys[KeyEvent.KEYCODE_DPAD_RIGHT] = RIGHT_VALUE;
+        keys[KeyEvent.KEYCODE_BUTTON_A] = B_VALUE;
+        keys[KeyEvent.KEYCODE_BUTTON_B] = X_VALUE;
+        keys[KeyEvent.KEYCODE_BUTTON_X] = A_VALUE;
+        keys[KeyEvent.KEYCODE_BUTTON_Y] = Y_VALUE;
+        keys[KeyEvent.KEYCODE_BUTTON_SELECT] = SELECT_VALUE;
+        keys[KeyEvent.KEYCODE_BUTTON_START] = START_VALUE;
+        keys[KeyEvent.KEYCODE_BUTTON_L1] = L1_VALUE;
+        keys[KeyEvent.KEYCODE_BUTTON_R1] = R1_VALUE;
+        keys[KeyEvent.KEYCODE_BUTTON_L2] = L2_VALUE;
+        keys[KeyEvent.KEYCODE_BUTTON_R2] = R2_VALUE;
 
         return keys[keyCode];
+    }
+
+    @DexAdd
+    protected void setPadData(int index, int keyCode, boolean isDown)
+    {
+        int gameKey = mapKey(keyCode);
+
+        if(isDown)
+            pad_data[index] |= gameKey;
+        else
+            pad_data[index] &= ~gameKey;
+
+        Emulator.setPadData(index, pad_data[index]);
+    }
+
+    @DexAdd
+    @Override
+    public boolean onGenericMotion(View v, MotionEvent event) {
+        float xAxisValue = event.getAxisValue(MotionEvent.AXIS_X);
+        float yAxisValue = event.getAxisValue(MotionEvent.AXIS_Y);
+
+        int playerIndex = getPlayerIndex(event);
+
+        boolean processed = false;
+
+        if(xAxisValue < -0.5f)
+        {
+            setPadData(playerIndex, KeyEvent.KEYCODE_DPAD_LEFT, true);
+            processed = true;
+        }
+        else if(xAxisValue > 0.5f)
+        {
+            setPadData(playerIndex, KeyEvent.KEYCODE_DPAD_RIGHT, true);
+            processed = true;
+        }
+        else if(Math.abs(xAxisValue) < 0.2f)
+        {
+            setPadData(playerIndex, KeyEvent.KEYCODE_DPAD_LEFT, false);
+            setPadData(playerIndex, KeyEvent.KEYCODE_DPAD_RIGHT, false);
+            processed = true;
+        }
+
+        if(yAxisValue < -0.5f)
+        {
+            setPadData(playerIndex, KeyEvent.KEYCODE_DPAD_UP, true);
+            processed = true;
+        }
+        else if(yAxisValue > 0.5f)
+        {
+            setPadData(playerIndex, KeyEvent.KEYCODE_DPAD_DOWN, true);
+            processed = true;
+        }
+        else if(Math.abs(yAxisValue) < 0.2f)
+        {
+            setPadData(playerIndex, KeyEvent.KEYCODE_DPAD_UP, false);
+            setPadData(playerIndex, KeyEvent.KEYCODE_DPAD_DOWN, false);
+            processed = true;
+        }
+
+        return processed;
     }
 
     @DexReplace
@@ -95,51 +158,16 @@ public class InputHandler implements View.OnTouchListener, View.OnKeyListener, I
 //            return true;
 //        }
 
-        int gameKey = mapKey(keyCode);
-
-        if(gameKey == -1)
+        if(mapKey(keyCode) == -1)
             return false;
 
-        return handlePADKey(getPlayerIndex(event) * emulatorInputValues.length + gameKey, event);
+        setPadData(getPlayerIndex(event), keyCode, event.getAction() == KeyEvent.ACTION_DOWN);
+
+        return true;
     }
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
         return false;
-    }
-
-    protected boolean handlePADKey(int value, KeyEvent event){
-
-//        int v = emulatorInputValues[value%emulatorInputValues.length];
-//
-//        if(v==L2_VALUE)
-//        {
-//            if(!Emulator.isInMAME())
-//            {
-//                mm.showDialog(DialogHelper.DIALOG_EXIT);
-//            }
-//            else
-//            {
-//                Emulator.setValue(Emulator.EXIT_GAME_KEY, 1);
-//                try {
-//                    Thread.sleep(100);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                Emulator.setValue(Emulator.EXIT_GAME_KEY, 0);
-//            }
-//        }
-//        else if(v==R2_VALUE)
-//        {
-//            mm.showDialog(DialogHelper.DIALOG_OPTIONS);
-//        }
-//        else
-//        {
-//            int i = value/emulatorInputValues.length;
-//            setPadData(i,event,v);
-//            Emulator.setPadData(i,pad_data[i]);
-//        }
-
-        return true;
     }
 }
