@@ -245,7 +245,7 @@ android {
             addManifestPlaceholders([UMENG_APPKEY: "58d42515677baa3b35001ce9"])
         }
 
-        kod{
+        wof{
             resValue "string", "app_name", "三国志"
 
             addManifestPlaceholders([UMENG_APPKEY: "58d425294544cb138b001c6d"])
