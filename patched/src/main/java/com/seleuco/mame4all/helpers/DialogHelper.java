@@ -42,9 +42,9 @@ public class DialogHelper {
     public Dialog source_createDialog(int paramInt){return null;}
 
     @DexAdd
-    public Dialog createDialog(int paramInt)
+    public Dialog createDialog(int id)
     {
-        if(paramInt == DIALOG_EXIT || paramInt == DIALOG_EXIT_GAME)
+        if(id == DIALOG_EXIT || id == DIALOG_EXIT_GAME)
         {
             if(BuildConfig.DEBUG || MetaDataHelper.getString("UMENG_CHANNEL").equals("dangbei") || new Date().getTime() - SystemHelper.getLastUpdateTime() > 8 * 60 * 60 * 1000)
                 RecommendManager.showDialog(mm);
@@ -54,6 +54,6 @@ public class DialogHelper {
             return null;
         }
 
-        return source_createDialog(paramInt);
+        return source_createDialog(id);
     }
 }

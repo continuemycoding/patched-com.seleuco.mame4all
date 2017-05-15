@@ -43,39 +43,21 @@ public class MAME4all extends Activity {
 
         final Handler handler = new Handler();
 
-        for(int i=1;i<=5;i++)
+        int[] keys = new int[]{KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_DPAD_LEFT, KeyEvent.KEYCODE_DPAD_RIGHT, KeyEvent.KEYCODE_BUTTON_START};
+
+        for(int i=0;i<keys.length * 2;i++)
         {
-            final int index = i;
+            final int action = i % 2 == 0 ? KeyEvent.ACTION_DOWN : KeyEvent.ACTION_UP;
+            final int code = keys[i / 2];
+
+            final long delayMillis = i % 2 == 0 ? 200 * i: 200 * i + 50;
 
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    if(index == 4)
-                    {
-                        MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_LEFT));
-                        MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_RIGHT));
-
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DPAD_LEFT));
-                                MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DPAD_RIGHT));
-                            }
-                        }, 100);
-
-                        return;
-                    }
-
-                    MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BUTTON_START));
-
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BUTTON_START));
-                        }
-                    }, 100);
+                    MAME4all.this.dispatchKeyEvent(new KeyEvent(action, code));
                 }
-            }, 200 * i);
+            }, delayMillis);
         }
     }
 
