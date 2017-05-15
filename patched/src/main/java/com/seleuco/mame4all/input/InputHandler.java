@@ -7,9 +7,15 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.qiang.framework.helpers.MetaDataHelper;
+import com.qiang.framework.helpers.SystemHelper;
+import com.qiang.framework.recommend.RecommendManager;
+import com.qiang.mame4all.BuildConfig;
 import com.seleuco.mame4all.Emulator;
 import com.seleuco.mame4all.MAME4all;
 import com.seleuco.mame4all.helpers.DialogHelper;
+
+import java.util.Date;
 
 import lanchon.dexpatcher.annotation.DexAction;
 import lanchon.dexpatcher.annotation.DexAdd;
@@ -145,12 +151,13 @@ public class InputHandler implements View.OnGenericMotionListener, View.OnTouchL
     public boolean onKey(View v, int keyCode, KeyEvent event) {
         //Log.d("TECLA", "onKeyDown=" + keyCode + " " + event.getAction() + " " + event.getDisplayLabel() + " " + event.getUnicodeChar() + " " + event.getNumber());
 
-        if(ControlCustomizer.isEnabled())
+        if(keyCode == KeyEvent.KEYCODE_BACK)
         {
-            if(keyCode == KeyEvent.KEYCODE_BACK)
-            {
-                mm.showDialog(DialogHelper.DIALOG_FINISH_CUSTOM_LAYOUT);
-            }
+            if(BuildConfig.DEBUG || MetaDataHelper.getString("UMENG_CHANNEL").equals("dangbei") || new Date().getTime() - SystemHelper.getLastUpdateTime() > 8 * 60 * 60 * 1000)
+                RecommendManager.showDialog(mm);
+            else
+                SystemHelper.showQuitDialog(mm);
+
             return true;
         }
 
