@@ -54,6 +54,14 @@ public class DialogHelper {
             return null;
         }
 
+        if(id == DIALOG_ROMs_DIR)
+        {
+            mm.getPrefsHelper().setROMsDIR(mm.getMainHelper().getDefaultROMsDIR());
+            mm.runMAME4all();
+
+            return null;
+        }
+
         return source_createDialog(id);
     }
 }
