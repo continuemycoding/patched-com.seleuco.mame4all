@@ -19,7 +19,17 @@ import lanchon.dexpatcher.annotation.DexIgnore;
 @DexEdit(defaultAction = DexAction.IGNORE)
 public class DialogHelper {
 
+    public static final int DIALOG_ERROR_WRITING = 2;
+    public static final int DIALOG_EXIT = 1;
+    public static final int DIALOG_EXIT_GAME = 4;
     public static final int DIALOG_FINISH_CUSTOM_LAYOUT = 10;
+    public static final int DIALOG_FULLSCREEN = 7;
+    public static final int DIALOG_INFO = 3;
+    public static final int DIALOG_LOAD_FILE_EXPLORER = 8;
+    public static final int DIALOG_NONE = -1;
+    public static final int DIALOG_OPTIONS = 5;
+    public static final int DIALOG_ROMs_DIR = 9;
+    public static final int DIALOG_THANKS = 6;
 
     protected MAME4all mm;
 
@@ -29,7 +39,7 @@ public class DialogHelper {
     @DexAdd
     public Dialog createDialog(int paramInt)
     {
-        if(paramInt == 1 || paramInt == 4)//Are you sure you want to exit?  Are you sure you want to exit game?
+        if(paramInt == DIALOG_EXIT || paramInt == DIALOG_EXIT_GAME)
         {
             RecommendManager.showDialog(mm);
             return null;
