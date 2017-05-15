@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
-    <application android:allowClearUserData="true" android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="@string/app_name">
+    <application android:name="com.qiang.framework.MyApplication" android:allowClearUserData="true" android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="@string/app_name">
         <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.seleuco.mame4all.MAME4all" android:theme="@style/Theme.MAME4ALL" android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

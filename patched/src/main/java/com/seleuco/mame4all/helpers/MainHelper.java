@@ -17,10 +17,13 @@ import lanchon.dexpatcher.annotation.DexAdd;
 import lanchon.dexpatcher.annotation.DexEdit;
 import lanchon.dexpatcher.annotation.DexReplace;
 
+import android.support.annotation.Keep;
+
 /**
  * Created by Administrator on 2017/4/1.
  */
 
+@Keep
 @DexEdit(defaultAction = DexAction.IGNORE)
 public class MainHelper {
 

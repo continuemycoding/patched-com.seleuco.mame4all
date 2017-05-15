@@ -1,5 +1,6 @@
 package com.seleuco.mame4all.input;
 
+import android.support.annotation.Keep;
 import android.view.InputDevice;
 import android.view.InputEvent;
 import android.view.KeyEvent;
@@ -19,6 +20,7 @@ import lanchon.dexpatcher.annotation.DexReplace;
  * Created by Administrator on 2017/4/2.
  */
 
+@Keep
 @DexEdit(defaultAction = DexAction.IGNORE)
 public class InputHandler implements View.OnGenericMotionListener, View.OnTouchListener, View.OnKeyListener, IController {
 

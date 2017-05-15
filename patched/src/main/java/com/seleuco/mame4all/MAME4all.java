@@ -4,10 +4,10 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.Keep;
 import android.view.KeyEvent;
 import android.view.View;
 
-import com.qiang.framework.helpers.LogHelper;
 import com.seleuco.mame4all.input.InputHandler;
 import com.seleuco.mame4all.views.InputView;
 
@@ -19,6 +19,7 @@ import lanchon.dexpatcher.annotation.DexEdit;
  * Created by Administrator on 2017/4/3.
  */
 
+@Keep
 @DexEdit(defaultAction = DexAction.IGNORE)
 public class MAME4all extends Activity {
 
@@ -76,5 +77,13 @@ public class MAME4all extends Activity {
                 }
             }, 200 * i);
         }
+    }
+
+    @DexAdd
+    @Override
+    public void onDestroy () {
+        super.onDestroy();
+
+        System.exit(0);
     }
 }
