@@ -151,14 +151,19 @@ public class InputHandler implements View.OnGenericMotionListener, View.OnTouchL
     public boolean onKey(View v, int keyCode, KeyEvent event) {
         //Log.d("TECLA", "onKeyDown=" + keyCode + " " + event.getAction() + " " + event.getDisplayLabel() + " " + event.getUnicodeChar() + " " + event.getNumber());
 
-        if(keyCode == KeyEvent.KEYCODE_BACK)
+        if(event.getAction() == KeyEvent.ACTION_DOWN)
         {
-            if(BuildConfig.DEBUG || MetaDataHelper.getString("UMENG_CHANNEL").equals("dangbei") || new Date().getTime() - SystemHelper.getLastUpdateTime() > 8 * 60 * 60 * 1000)
-                RecommendManager.showDialog(mm);
-            else
-                SystemHelper.showQuitDialog(mm);
+            if(keyCode == KeyEvent.KEYCODE_BACK)
+            {
+                mm.showDialog(DialogHelper.DIALOG_EXIT);
+                return true;
+            }
 
-            return true;
+            if(keyCode == KeyEvent.KEYCODE_MENU)
+            {
+                mm.showDialog(DialogHelper.DIALOG_OPTIONS);
+                return true;
+            }
         }
 
 //        if(mm.getPrefsHelper().getInputExternal() != PrefsHelper.PREF_INPUT_DEFAULT)
