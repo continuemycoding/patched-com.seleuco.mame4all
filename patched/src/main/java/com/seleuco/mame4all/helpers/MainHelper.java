@@ -101,4 +101,9 @@ public class MainHelper {
             e.printStackTrace();
         }
     }
+
+    public boolean ensureROMsDir(String paramString)
+    {
+        return false;
+    }
 }

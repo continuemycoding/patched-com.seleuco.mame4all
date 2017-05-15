@@ -8,6 +8,8 @@ import android.support.annotation.Keep;
 import android.view.KeyEvent;
 import android.view.View;
 
+import com.seleuco.mame4all.helpers.MainHelper;
+import com.seleuco.mame4all.helpers.PrefsHelper;
 import com.seleuco.mame4all.input.InputHandler;
 import com.seleuco.mame4all.views.InputView;
 
@@ -27,6 +29,21 @@ public class MAME4all extends Activity {
 
     protected View emuView;
     protected InputView inputView;
+
+    public MainHelper getMainHelper()
+    {
+        return null;
+    }
+
+    public PrefsHelper getPrefsHelper()
+    {
+        return null;
+    }
+
+    public void runMAME4all()
+    {
+
+    }
 
     @DexEdit(target = "onCreate")
     protected void source_onCreate(Bundle savedInstanceState){}
