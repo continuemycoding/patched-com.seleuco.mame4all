@@ -3,8 +3,11 @@ package com.seleuco.mame4all;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.KeyEvent;
 import android.view.View;
 
+import com.qiang.framework.helpers.LogHelper;
 import com.seleuco.mame4all.input.InputHandler;
 import com.seleuco.mame4all.views.InputView;
 
@@ -36,5 +39,42 @@ public class MAME4all extends Activity {
 
         emuView.setOnGenericMotionListener(inputHandler);
         inputView.setOnGenericMotionListener(inputHandler);
+
+        final Handler handler = new Handler();
+
+        for(int i=1;i<=5;i++)
+        {
+            final int index = i;
+
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if(index == 4)
+                    {
+                        MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_LEFT));
+                        MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_RIGHT));
+
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DPAD_LEFT));
+                                MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DPAD_RIGHT));
+                            }
+                        }, 100);
+
+                        return;
+                    }
+
+                    MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BUTTON_START));
+
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            MAME4all.this.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BUTTON_START));
+                        }
+                    }, 100);
+                }
+            }, 200 * i);
+        }
     }
 }
