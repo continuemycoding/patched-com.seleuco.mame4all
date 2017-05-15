@@ -3,7 +3,7 @@ package com.seleuco.mame4all.helpers;
 import android.content.Context;
 import android.os.Environment;
 
-import com.qiang.framework.helper.FileHelper;
+import com.qiang.framework.helpers.FileHelper;
 import com.seleuco.mame4all.MAME4all;
 
 import java.io.BufferedInputStream;
