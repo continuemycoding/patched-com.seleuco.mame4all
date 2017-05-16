@@ -60,7 +60,7 @@ public class MAME4all extends Activity {
 
         final Handler handler = new Handler();
 
-        int[] keys = new int[]{KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_DPAD_LEFT, KeyEvent.KEYCODE_DPAD_RIGHT, KeyEvent.KEYCODE_BUTTON_START};
+        int[] keys = new int[]{KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_DPAD_LEFT, KeyEvent.KEYCODE_DPAD_RIGHT, KeyEvent.KEYCODE_BUTTON_START};
 
         for(int i=0;i<keys.length * 2;i++)
         {
